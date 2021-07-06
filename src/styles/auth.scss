@@ -6,7 +6,7 @@
   aside {
     flex: 7;
 
-    background: #835afd;
+    background: linear-gradient(90deg, #000 99%, #f8f8f8);
     color: #FFF;
 
     display: flex;
@@ -52,6 +52,7 @@
     text-align: center;    
 
     > img {
+      width: 360px;
       align-self: center;
     }
 
