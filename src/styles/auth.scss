@@ -86,7 +86,7 @@
       margin-top: 16px;
 
       a {
-        color: #e559f9;
+        color: #C70000;
       }
     }
   }
@@ -96,15 +96,15 @@
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #ea4335;
-    color: #FFF;
+    background: #fff;
+    border: 1px solid #a8a8b3;
+    color: #000;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     cursor: pointer;
-    border: 0;
 
     transition: filter 0.2s;
 

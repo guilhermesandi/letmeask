@@ -2,7 +2,7 @@
   height: 50px;
   border-radius: 8px;
   font-weight: 500;
-  background: #835afd;
+  background: #C70000;
   color: #FFF;
   padding: 0 32px;
 
@@ -21,8 +21,8 @@
 
   &.outlined {
     background: #FFF;
-    border: 1px solid #835afd;
-    color: #835afd;
+    border: 1px solid #C70000;
+    color: #C70000;
   }
 
   &:not(:disabled):hover {

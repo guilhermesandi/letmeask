@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import valorantImg from '../assets/images/valorant.png';
 import logoImg from '../assets/images/tobepro.png';
-import googleIconImg from '../assets/images/google-icon.svg';
+import googleIconImg from '../assets/images/google-icon-colored.svg';
 
 import { database } from '../services/firebase';
 
