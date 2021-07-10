@@ -9,8 +9,8 @@
   }
 
   &.highlighted {
-    background: #F4F0FF;
-    border: 1px solid #835afd;
+    background: #F5E9EC;
+    border: 1px solid #C70000;
 
     footer .user-info span {
       color: #29292e;
@@ -66,10 +66,10 @@
         gap: 8px;
 
         &.liked {
-          color: #835afd;
+          color: #C70000;
 
           svg path {
-            stroke: #835afd;
+            stroke: #C70000;
           }
         }
       }

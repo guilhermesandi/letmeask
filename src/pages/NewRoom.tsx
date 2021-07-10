@@ -1,8 +1,8 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
+import valorantImg from '../assets/images/valorant.png';
+import logoImg from '../assets/images/tobepro.png';
 
 import { Button } from '../components/Button';
 import { database } from '../services/firebase';
@@ -29,15 +29,15 @@ export function NewRoom() {
       authorId: user?.id,
     });
 
-    history.push(`/rooms/${firebaseRoom.key}`);
+    history.push(`/admin/rooms/${firebaseRoom.key}`);
   }
 
   return (
     <div id="page-auth">
       <aside>
-        <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+      <img src={valorantImg} alt="Logo de um jogo" />
+        <strong>Crie salas de jogos ao-vivo</strong>
+        <p>Aprenda a ser PRO, tire suas dúvidas e aprenda em tempo-real</p>
       </aside>
       <main>
         <div className="main-content">
