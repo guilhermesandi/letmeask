@@ -4,6 +4,7 @@ import logoImg from '../assets/images/tobepro.png';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
+import emptyRoomImg from '../assets/images/empty-room.png';
 
 import { Button } from '../components/Button';
 import { Question } from '../components/Question';
@@ -69,6 +70,10 @@ export function AdminRoom() {
             <span>{questions.length} pergunta(s)</span>
           )}
         </div>
+
+        {questions.length === 0 && (
+          <img src={emptyRoomImg} alt="Sala vazia" />
+        )}
 
         <div className="question-list">
           {questions.map(question => {
