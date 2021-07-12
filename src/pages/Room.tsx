@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import logoImg from '../assets/images/tobepro.png';
 
@@ -18,11 +19,19 @@ type RoomParams = {
 
 export function Room() {
   const { user, signInWithGoogle } = useAuth();
+  const history = useHistory();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState('');
+  const [isAuthor, setIsAuthor] = useState(false);
   const roomId = params.id;
+  
+  const { title, questions, roomAuthorId } = useRoom(roomId);
 
-  const { title, questions } = useRoom(roomId);
+  useEffect(() => {
+    if (user?.id && roomAuthorId === user?.id) {
+      setIsAuthor(true);
+    }
+  }, [roomAuthorId, user])
 
   async function handleSignIn() {
     if (!user) {
@@ -70,8 +79,18 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
-          <RoomCode code={roomId} />
+          <img
+            src={logoImg}
+            alt="Letmeask"
+            onClick={() => history.push('/')}
+            style={{ cursor: 'pointer' }}
+          />
+          <div>
+            {isAuthor && (
+              <Button isOutlined onClick={() => history.push(`/admin/rooms/${roomId}`)}>Administrar sala</Button>
+            )}
+            <RoomCode code={roomId} />
+          </div>
         </div>
       </header>
 
