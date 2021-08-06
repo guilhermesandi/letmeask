@@ -16,6 +16,13 @@
 
 <br>
 
+## ✨ Tecnologias
+
+-   [ ] ReactJS
+-   [ ] Typescript
+-   [ ] Firebase Authentication
+-   [ ] Firebase Realtime Database
+
 ## 🚀 Como usar
 
 ```
